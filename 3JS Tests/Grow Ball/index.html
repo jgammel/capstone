@@ -9,18 +9,145 @@
 		</style>
 	</head>
 	<body>
+		<script src="../libraries/dat-gui/build/dat.gui.js"></script>
+		<script src="../libraries/three.js-master/examples/js/WebGL.js"></script><!--Check to see if Browser supports WebGL-->
 		<script src="../libraries/three.js-master/build/three.min.js"></script>
 		<script>
+			//****** SET UP DAT.GUI ********** 
+			//-------------------------------//	
+			
+			var BallGrower = function() {
+				this.ballRadius = 50;
+				this.ballWidth = 50;
+				this.ballHeight = 50;
+			};
+
+			var ball = new BallGrower();
+			var gui = new dat.GUI();
+			var radiusController = gui.add(ball, 'ballRadius', 0, 100);
+			gui.add(ball, 'ballWidth', 0, 100);
+			gui.add(ball, 'ballHeight', 0, 100);
+
+			radiusController.onChange(function(value) {
+				updateGeometry(value);
+			});
+
 			//****** REQUIRED ITEMS ********** 
 			//-------------------------------//
 
 			var scene = new THREE.Scene();
-			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-			//renders the scene with a camera
+			//use the background property of scene to set the color
+			scene.background = new THREE.Color( 0xfd59d7 );
+			//set up PerspectiveCamera (1 of 3 cameras available)
+			//PerspectiveCamera(field of view in degrees, aspect ratio, near clipping plane, far clipping plane)
+			var camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 0.1, 1000 );
+			//renders the scene with a camera. choose from a few different renderers.
 			var renderer = new THREE.WebGLRenderer();
+			renderer.shadowMap.enabled = true;
+			renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+			//set the size of the renderer, width and height of the area you want to fill
+			//setSize(width, height, updateStyle boolean)
+			renderer.setSize( window.innerWidth, window.innerHeight );
+
+			//add renderer element to HTML DOM
+			document.body.appendChild( renderer.domElement );
 
 			//*****************************//
 			//-------------------------------//
+
+			//BoxGeometry contains vertices and faces of the cube. several included in the library
+			//var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+
+			//SphereGeometry(radius, widthSegments, heightSegments)
+			var geometry = new THREE.SphereGeometry( 50, 50, 50 );
+
+
+			//material to color the cube. Materials properties are an object. Colors are in HEX.
+			var material = new THREE.MeshLambertMaterial({color: 0xfd59d7});
+			var sphere = new THREE.Mesh( geometry, material );
+			sphere.castShadow = true;
+			
+
+			//mesh is an object that contains the geometry and the material. We manipulate the mesh.
+			//var cube = new THREE.Mesh( geometry, material );
+
+			//add the coordinates to the scene. default position of scene.add is 0,0,0
+			scene.add( sphere );
+
+			// //Ambient Light illuminates everything in the scene equally and does not cast shadows
+			// //AmbientLight(color, intensity)
+			 var a_light = new THREE.AmbientLight( 0x404040, 3 ); // soft white light
+			 scene.add( a_light );
+
+			 // White directional light at half intensity shining from the top.
+			var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+			directionalLight.position = (1, 1, 0);
+			directionalLight.target = sphere;
+			scene.add( directionalLight.target );		
+			 
+			 //PointLight(color, intensity, distance, decay)
+			 //distance is the maximum range of the light
+			 //decay is the amount the light dims along the disance of the light
+
+			 var p_light2 = new THREE.PointLight( 0xfffff, 2, 0, 2 );
+			 p_light2.position.set( -100, -100, 0 );
+			 p_light2.castShadow = true;
+			 scene.add( p_light2 );
+
+			 //Set up shadow properties for the light
+			p_light2.shadow.mapSize.width = 512;  // default
+			p_light2.shadow.mapSize.height = 512; // default
+			p_light2.shadow.camera.near = 0.5;       // default
+			p_light2.shadow.camera.far = 500      // default	
+
+
+			//Create a plane that receives shadows (but does not cast them)
+			var planeGeometry = new THREE.PlaneBufferGeometry( 20, 20, 32, 32 );
+			var planeMaterial = new THREE.MeshStandardMaterial( { color: 0x00ff00 } )
+			var plane = new THREE.Mesh( planeGeometry, planeMaterial );
+			plane.receiveShadow = true;
+			scene.add( plane );	
+
+			//Create a helper for the shadow camera (optional)
+			var helper = new THREE.CameraHelper( p_light2.shadow.camera );
+			scene.add( helper );
+	
+			function updateGeometry(value){
+				scene.remove(sphere);
+				sphere.geometry.dispose();
+				sphere.material.dispose();
+				var radius = value;
+				geometry = new THREE.SphereGeometry( radius, 50, 50 );
+				material = new THREE.MeshLambertMaterial({color: 0xfd59d7});
+				sphere = new THREE.Mesh( geometry, material );
+				scene.add( sphere );
+			}
+			//camera has to be moved out otherwise it will render at 0,0,0 inside the cube
+			camera.position.z = 100;	
+
+			//check to see if browser can use WebGL
+			if ( WEBGL.isWebGLAvailable() ) {
+			//render/animate loop is required to see anything. causes the renderer to redraw the scene every time the page is refreshed.
+
+				
+			//anything you want to move or change has to go through the animate loop
+				function animate() {
+					//advantages of using requestAnimationFrame: pauses when a user navigates to another browser or tab to conserve energy
+					requestAnimationFrame( animate );
+					//rotate every frame approximately 60 frame per second
+					sphere.rotation.z += 0.01;
+					renderer.render( scene, camera );
+				}
+				animate();
+			}
+			//if WebGL is not available print an error message
+			else {
+
+				var warning = WEBGL.getWebGLErrorMessage();
+				document.getElementById( 'container' ).appendChild( warning );
+
+			}								
 		</script>
 	</body>
 </html>
