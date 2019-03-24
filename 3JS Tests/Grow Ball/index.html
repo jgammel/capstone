@@ -24,13 +24,20 @@
 
 			var ball = new BallGrower();
 			var gui = new dat.GUI();
-			var radiusController = gui.add(ball, 'ballRadius', 0, 100);
+			gui.add(ball, 'ballRadius', 0, 100);
 			gui.add(ball, 'ballWidth', 0, 100);
 			gui.add(ball, 'ballHeight', 0, 100);
+			for (var i in gui.__controllers){
+				var controller = gui.__controllers[i];
 
-			radiusController.onChange(function(value) {
-				updateGeometry(value);
-			});
+				//onFinishChange so the geometry doesn't get redrawn for every adjustment on the slider.
+				//could also use onChange() if I want the sphere to scale in real time
+				controller.onFinishChange(function(value) {
+					//value = user set value of input field
+					//this.object = dat.gui object containing the current values of all the inputs
+					updateGeometry(value, this.object);
+				});
+			}
 
 			//****** REQUIRED ITEMS ********** 
 			//-------------------------------//
@@ -113,15 +120,20 @@
 			var helper = new THREE.CameraHelper( p_light2.shadow.camera );
 			scene.add( helper );
 	
-			function updateGeometry(value){
-				scene.remove(sphere);
-				sphere.geometry.dispose();
-				sphere.material.dispose();
-				var radius = value;
-				geometry = new THREE.SphereGeometry( radius, 50, 50 );
-				material = new THREE.MeshLambertMaterial({color: 0xfd59d7});
-				sphere = new THREE.Mesh( geometry, material );
-				scene.add( sphere );
+			function updateGeometry(value, object){
+				//store object values as variables
+				var radius = object.ballRadius;
+				var width = object.ballWidth;
+				var height = object.ballHeight;
+
+				//next we need to remove the existing geometry before we can rebuild it
+				 scene.remove(sphere);
+				 sphere.geometry.dispose();
+				 sphere.material.dispose();
+				 geometry = new THREE.SphereGeometry( radius, 50, 50 );
+				 material = new THREE.MeshLambertMaterial({color: 0xfd59d7});
+				 sphere = new THREE.Mesh( geometry, material );
+				 scene.add( sphere );
 			}
 			//camera has to be moved out otherwise it will render at 0,0,0 inside the cube
 			camera.position.z = 100;	
