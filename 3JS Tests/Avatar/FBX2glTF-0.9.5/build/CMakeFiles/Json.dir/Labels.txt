@@ -1,0 +1,13 @@
+# Target labels
+ Json
+# Source files and their labels
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/Json
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/Json.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/Json-complete.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-install.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-mkdir.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-download.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-update.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-patch.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-configure.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-build.rule

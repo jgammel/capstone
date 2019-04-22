@@ -1,0 +1,13 @@
+# draco pkg-config.
+prefix=/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco
+exec_prefix=/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/bin
+libdir=/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/lib
+includedir=/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/include
+
+Name: Draco
+Description: 3D Compression.
+Version: 1.2.5
+Requires:
+Conflicts:
+Libs: -L/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/lib -ldraco
+Cflags: -I/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/include -std=c++11

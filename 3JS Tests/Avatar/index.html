@@ -2,75 +2,96 @@
 <html>
 	<head>
 		<meta charset=utf-8>
-		<title>Load Avatar</title>
+		<title>Load Avatar - glTF version</title>
 		<style>
 			body { margin: 0; }
 			canvas { width: 100%; height: 100% }
 		</style>
 	</head>
 	<body>
-		<script src="../libraries/dat-gui/build/dat.gui.js"></script>
-		<script src="../libraries/three.js-master/examples/js/WebGL.js"></script><!--Check to see if Browser supports WebGL-->
-		<script src="../libraries/three.js-master/build/three.min.js"></script>
+		<script src="../libraries/three.js-master/build/three.js"></script>
 		<!--Must include objecct loader. GLTF is preferred-->
-		<script src="../libraries/three.js-master/examples/js/loaders/OBJLoader.js"></script>
+		<script src="../libraries/three.js-master/examples/js/loaders/GLTFLoader.js"></script>
+		<script src="../libraries/dat-gui/build/dat.gui.js"></script>
+		<script src="../libraries/three.js-master/examples/js/WebGL.js"></script>
 		<script>
+			//Check to see if Browser supports WebGL
+			if ( WEBGL.isWebGLAvailable() === false ) {
+				document.body.appendChild( WEBGL.getWebGLErrorMessage() );
+			}
 			var container;
 			var camera, scene, renderer;
 			var mouseX = 0, mouseY = 0;
 			var windowHalfX = window.innerWidth / 2;
 			var windowHalfY = window.innerHeight / 2;
 			var object;
+
+			//init renders the scene
 			init();
+			//animate animates frames in a loop
 			animate();
+
 			function init() {
+				//create the container that will house the renderer later on
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
+
+
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-				camera.position.z = 250;
-				// scene
+				camera.position.set( 0, 1, 2 );
+
+				// scene, background, fog, etc
 				scene = new THREE.Scene();
-				var ambientLight = new THREE.AmbientLight( 0xcccccc, 0.4 );
+				scene.fog = new THREE.Fog( 0xe0e0e0, 20, 100 );
+				
+				//lights
+				var ambientLight = new THREE.AmbientLight( 0xf3f3f3, 0.9 );//ambient lights light a scene uniformly and cannot be used to cast shadow as they do not have any direction
 				scene.add( ambientLight );
-				var pointLight = new THREE.PointLight( 0xffffff, 0.8 );
-				camera.add( pointLight );
+
+				var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+				directionalLight.setPosition = new THREE.Vector3(5,5,0);
+				scene.add( directionalLight );
+				
 				scene.add( camera );
-				// manager
-				function loadModel() {
-					object.traverse( function ( child ) {
-						if ( child.isMesh ) child.material.map = texture;
-					} );
-					object.position.y = - 95;
-					scene.add( object );
-				}
-				var manager = new THREE.LoadingManager( loadModel );
-				manager.onProgress = function ( item, loaded, total ) {
-					console.log( item, loaded, total );
-				};
-				// texture
-				var textureLoader = new THREE.TextureLoader( manager );
-				var texture = textureLoader.load( 'textures/UV_Grid_Sm.jpg' );
-				// model
-				function onProgress( xhr ) {
+
+				//model loader
+				// Instantiate a loader
+				var loader = new THREE.GLTFLoader(); 
+				
+				//this type of file loading only works when running a local server. Currently using MAMP
+				loader.load('glb/T-Pose-with-skeleton.gltf',
+				function(gltf){
+					object = gltf.scene;
+					scene.add(object);
+					console.log("called when the resource is loaded");
+				},
+				function(xhr){
+					console.log("called while loading is progressing");
 					if ( xhr.lengthComputable ) {
 						var percentComplete = xhr.loaded / xhr.total * 100;
 						console.log( 'model ' + Math.round( percentComplete, 2 ) + '% downloaded' );
 					}
-				}
-				function onError() {}
-				var loader = new THREE.OBJLoader( manager );
-				loader.load( 'obj/female.obj', function ( obj ) {
-					object = obj;
-				}, onProgress, onError );
-				//
+				},
+				function(error){
+					console.log("called when loading has errors");
+					console.log(error);
+				});
+
+				// some code for loading manager might go here?
+
+				// texture
+				// some code for a texture loader might go here
+
+				
+				//renderer
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
-				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 				//
 				window.addEventListener( 'resize', onWindowResize, false );
 			}
+			
 			function onWindowResize() {
 				windowHalfX = window.innerWidth / 2;
 				windowHalfY = window.innerHeight / 2;
@@ -78,15 +99,14 @@
 				camera.updateProjectionMatrix();
 				renderer.setSize( window.innerWidth, window.innerHeight );
 			}
-			function onDocumentMouseMove( event ) {
-				mouseX = ( event.clientX - windowHalfX ) / 2;
-				mouseY = ( event.clientY - windowHalfY ) / 2;
-			}
+			
+			
 			//
 			function animate() {
 				requestAnimationFrame( animate );
 				render();
 			}
+			
 			function render() {
 				camera.position.x += ( mouseX - camera.position.x ) * .05;
 				camera.position.y += ( - mouseY - camera.position.y ) * .05;

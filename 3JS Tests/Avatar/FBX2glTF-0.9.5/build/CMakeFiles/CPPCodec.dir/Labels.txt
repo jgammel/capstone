@@ -1,0 +1,13 @@
+# Target labels
+ CPPCodec
+# Source files and their labels
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/CPPCodec
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/CPPCodec.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/CPPCodec-complete.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cppcodec/src/CPPCodec-stamp/CPPCodec-install.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cppcodec/src/CPPCodec-stamp/CPPCodec-mkdir.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cppcodec/src/CPPCodec-stamp/CPPCodec-download.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cppcodec/src/CPPCodec-stamp/CPPCodec-update.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cppcodec/src/CPPCodec-stamp/CPPCodec-patch.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cppcodec/src/CPPCodec-stamp/CPPCodec-configure.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cppcodec/src/CPPCodec-stamp/CPPCodec-build.rule

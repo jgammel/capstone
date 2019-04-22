@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/Json"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/Json.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/Json-complete.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-install.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-mkdir.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-download.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-update.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-patch.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-configure.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/json/src/Json-stamp/Json-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Json"
+		],
+		"name" : "Json"
+	}
+}

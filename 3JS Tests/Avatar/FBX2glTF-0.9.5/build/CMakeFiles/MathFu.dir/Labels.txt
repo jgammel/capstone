@@ -1,0 +1,13 @@
+# Target labels
+ MathFu
+# Source files and their labels
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/MathFu
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/MathFu.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/MathFu-complete.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/mathfu/src/MathFu-stamp/MathFu-install.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/mathfu/src/MathFu-stamp/MathFu-mkdir.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/mathfu/src/MathFu-stamp/MathFu-download.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/mathfu/src/MathFu-stamp/MathFu-update.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/mathfu/src/MathFu-stamp/MathFu-patch.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/mathfu/src/MathFu-stamp/MathFu-configure.rule
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/mathfu/src/MathFu-stamp/MathFu-build.rule

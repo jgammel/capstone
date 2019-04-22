@@ -1,0 +1,178 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/config/compression_shared.h
+stdint.h
+-
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/dynamic_integer_points_kd_tree_decoder.cc
+draco/compression/point_cloud/algorithms/dynamic_integer_points_kd_tree_decoder.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/point_cloud/algorithms/dynamic_integer_points_kd_tree_decoder.h
+draco/compression/point_cloud/algorithms/point_cloud_types.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/point_cloud/algorithms/point_cloud_types.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/dynamic_integer_points_kd_tree_decoder.h
+array
+-
+memory
+-
+stack
+-
+draco/compression/point_cloud/algorithms/point_cloud_types.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/point_cloud/algorithms/point_cloud_types.h
+draco/core/bit_coders/adaptive_rans_bit_decoder.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/bit_coders/adaptive_rans_bit_decoder.h
+draco/core/bit_coders/direct_bit_decoder.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/bit_coders/direct_bit_decoder.h
+draco/core/bit_coders/folded_integer_bit_decoder.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/bit_coders/folded_integer_bit_decoder.h
+draco/core/bit_coders/rans_bit_decoder.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/bit_coders/rans_bit_decoder.h
+draco/core/bit_utils.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/bit_utils.h
+draco/core/decoder_buffer.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/decoder_buffer.h
+draco/core/math_utils.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/math_utils.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/float_points_tree_decoder.cc
+draco/compression/point_cloud/algorithms/float_points_tree_decoder.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/point_cloud/algorithms/float_points_tree_decoder.h
+algorithm
+-
+draco/compression/point_cloud/algorithms/dynamic_integer_points_kd_tree_decoder.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/point_cloud/algorithms/dynamic_integer_points_kd_tree_decoder.h
+draco/compression/point_cloud/algorithms/quantize_points_3.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/point_cloud/algorithms/quantize_points_3.h
+draco/core/math_utils.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/math_utils.h
+draco/core/quantization_utils.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/quantization_utils.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/float_points_tree_decoder.h
+memory
+-
+draco/compression/config/compression_shared.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/config/compression_shared.h
+draco/compression/point_cloud/algorithms/point_cloud_compression_method.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/point_cloud/algorithms/point_cloud_compression_method.h
+draco/compression/point_cloud/algorithms/point_cloud_types.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/point_cloud/algorithms/point_cloud_types.h
+draco/compression/point_cloud/algorithms/quantize_points_3.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/point_cloud/algorithms/quantize_points_3.h
+draco/core/decoder_buffer.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/decoder_buffer.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/point_cloud_compression_method.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/point_cloud_types.h
+inttypes.h
+-
+vector
+-
+draco/core/vector_d.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/vector_d.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/quantize_points_3.h
+inttypes.h
+-
+draco/compression/point_cloud/algorithms/point_cloud_types.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/compression/point_cloud/algorithms/point_cloud_types.h
+draco/core/quantization_utils.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/compression/point_cloud/algorithms/draco/core/quantization_utils.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/ans.h
+vector
+-
+draco/core/divide.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/draco/core/divide.h
+draco/core/macros.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/draco/core/macros.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_coders/adaptive_rans_bit_decoder.h
+vector
+-
+draco/core/ans.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_coders/draco/core/ans.h
+draco/core/decoder_buffer.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_coders/draco/core/decoder_buffer.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_coders/direct_bit_decoder.h
+vector
+-
+draco/core/decoder_buffer.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_coders/draco/core/decoder_buffer.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_coders/folded_integer_bit_decoder.h
+vector
+-
+draco/core/decoder_buffer.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_coders/draco/core/decoder_buffer.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_coders/rans_bit_decoder.h
+vector
+-
+draco/core/ans.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_coders/draco/core/ans.h
+draco/core/decoder_buffer.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_coders/draco/core/decoder_buffer.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/bit_utils.h
+stdint.h
+-
+intrin.h
+-
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/decoder_buffer.h
+stdint.h
+-
+cstring
+-
+memory
+-
+draco/core/macros.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/draco/core/macros.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/divide.h
+stdint.h
+-
+climits
+-
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/macros.h
+assert.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/assert.h
+android/log.h
+-
+iostream
+-
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/math_utils.h
+inttypes.h
+-
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/quantization_utils.h
+stdint.h
+-
+cmath
+-
+draco/core/macros.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/draco/core/macros.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/vector_d.h
+inttypes.h
+-
+algorithm
+-
+array
+-
+cmath
+-
+draco/core/macros.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/draco/core/macros.h
+

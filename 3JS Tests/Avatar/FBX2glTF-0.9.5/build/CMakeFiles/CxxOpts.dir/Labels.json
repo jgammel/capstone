@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/CxxOpts"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/CxxOpts.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/CxxOpts-complete.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cxxopts/src/CxxOpts-stamp/CxxOpts-install.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cxxopts/src/CxxOpts-stamp/CxxOpts-mkdir.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cxxopts/src/CxxOpts-stamp/CxxOpts-download.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cxxopts/src/CxxOpts-stamp/CxxOpts-update.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cxxopts/src/CxxOpts-stamp/CxxOpts-patch.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cxxopts/src/CxxOpts-stamp/CxxOpts-configure.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/cxxopts/src/CxxOpts-stamp/CxxOpts-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"CxxOpts"
+		],
+		"name" : "CxxOpts"
+	}
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>Manipulate Mesh</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+		<script src="../libraries/dat-gui/build/dat.gui.js"></script>
+		<script src="../libraries/three.js-master/examples/js/WebGL.js"></script><!--Check to see if Browser supports WebGL-->
+		<script src="../libraries/three.js-master/build/three.js"></script>
+		<script>
+			
+			//****** REQUIRED ITEMS ********** 
+			//-------------------------------//
+
+			var scene = new THREE.Scene();
+			//use the background property of scene to set the color
+			scene.background = new THREE.Color( 0x00ffff );
+			//set up PerspectiveCamera (1 of 3 cameras available)
+			//PerspectiveCamera(field of view in degrees, aspect ratio, near clipping plane, far clipping plane)
+			var camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 0.1, 1000 );
+			//renders the scene with a camera. choose from a few different renderers.
+			var renderer = new THREE.WebGLRenderer();
+			renderer.shadowMap.enabled = true;
+			renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+			//set the size of the renderer, width and height of the area you want to fill
+			//setSize(width, height, updateStyle boolean)
+			renderer.setSize( window.innerWidth, window.innerHeight );
+
+			//add renderer element to HTML DOM
+			document.body.appendChild( renderer.domElement );
+
+			//*****************************//
+			//-------------------------------//
+
+			//set up the skeleton with an array of bones
+			//array of bones must be called bones
+			//can also use boneInverses for an array of Transform Matrixes
+			//use the bones to create the Skeleton and wrap the SkinnedMesh around the Skeleton.The bones will animate the Skeleton and the Skinned Mesh
+			var bones = [];
+
+			
+
+			// create bones that will be added to the skeleton
+			var av_shoulder = new THREE.Bone();
+			av_shoulder.name="shoulder";
+			
+			var av_elbow = new THREE.Bone();
+			av_elbow.name="elbow";
+			
+			var av_wrist = new THREE.Bone();
+			av_wrist.name="wrist";
+			
+			var av_hand = new THREE.Bone();
+			av_hand.name="hand";
+
+
+
+			//connecting bones
+			//.add is a method of Object3D which is the base class for Bone
+			//object.add(child_object). if child_object already has a parent, that parent will be removed in favor of the new one. an object can only have 1 parent.
+			av_shoulder.add( av_elbow );
+			av_elbow.add(av_wrist);
+			av_wrist.add(av_hand);
+
+			//push bones to bones array. Array must be called bones[]
+			bones.push( av_shoulder );
+			bones.push( av_elbow );
+			bones.push( av_wrist );
+			bones.push( av_hand );
+
+			//position each bone
+
+			av_shoulder.position.y = 9;
+			av_shoulder.position.x = 0;
+
+			av_elbow.position.y = -8;
+			av_elbow.position.x = 2;
+
+			av_wrist.position.y = -6;
+			av_wrist.position.x = 0;
+
+			av_hand.position.y = -3;
+			av_hand.position.x = -0.5;
+
+			//now create the geometry
+			//CylinderBufferGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, thetaStart, thetaLength)
+			var geometry = new THREE.CylinderBufferGeometry( 3, 2, 15, 8, 15, 5, 30 );
+			geometry.computeBoundingBox();
+			box = geometry.boundingBox;
+			//create a variable that stores the size of the shape. size.y returns the height. size.x returns the width.
+			var size = new THREE.Vector3;
+			box.getSize(size);
+			//height of the shape. in this case, 15
+			var height = size.y;
+			var halfHeight = size.y * 0.5;
+
+
+			// create the skin indices and skin weights
+			// we have 5 bones, so each bone should control approx 1/5 of the vertices
+			var position = geometry.attributes.position;
+			var vertex = new THREE.Vector3();	
+
+			var skinIndices = [];
+			var skinWeights = [];
+
+			//loop through every vertex in the geometry array and apply skinWeights and skinIndex to vertcies
+			for (i = 0; i < position.count; i++) { 
+			 //x,y,z values of vertex i. can use vertex.y vertex.x vertex.z to get values
+			 var current_vertex = vertex.fromBufferAttribute( position, i );
+			 var y = current_vertex.y;
+
+			 var skinIndex = Math.floor((halfHeight - y) / 4);
+			 var skinWeight = Math.abs((y - skinIndex) / halfHeight);
+
+			 skinIndices.push(skinIndex, skinIndex + 1, 0, 0);
+			 skinWeights.push( 1, 0.5, 0, 0 );
+
+			 //for vertex i, determine which bones will control the vertex and how much weight those bones will have
+
+			 
+			}
+
+			geometry.addAttribute( 'skinIndex', new THREE.Uint16BufferAttribute( skinIndices, 4 ) );
+			geometry.addAttribute( 'skinWeight', new THREE.Float32BufferAttribute( skinWeights, 4 ) );
+					
+
+			//new material class, make sure skinning property is enabled
+			//pass in properties to the material, supports any properties from Material class
+			var material_properties = {color: 0x00ffff, name: 'phong', wireframe: true, skinning: true };
+			var material = new THREE.MeshPhongMaterial( material_properties );
+
+			//create new SkinnedMesh to manipulate. requireds geometry and a material that supports skinning and has skinning enabled
+			var mesh = new THREE.SkinnedMesh( geometry, material ); //optional material can be passed in
+
+			//create new Skeleton class and add the array of bones
+			var av_skeleton = new THREE.Skeleton( bones );			
+
+
+			var rootBone = av_skeleton.bones[ 0 ];
+			mesh.add( rootBone );
+
+			// bind the skeleton to the mesh
+
+			mesh.bind( av_skeleton );
+
+			mesh.castShadow = true;
+			
+
+			//SkeletonHelper lets me visualize the skeleton for development
+			var av_skeleton_helper = new THREE.SkeletonHelper( mesh );
+			av_skeleton_helper.material.linewidth = 10;
+			//av_skeleton_helper.material.lights = true;
+			av_skeleton_helper.material.color = new THREE.Color(0x0000ff);
+			scene.add( av_skeleton_helper );
+
+			//mesh is an object that contains the geometry and the material. We manipulate the mesh.
+			//var cube = new THREE.Mesh( geometry, material );
+
+			//add the coordinates to the scene. default position of scene.add is 0,0,0
+			scene.add( mesh );
+	
+			//camera has to be moved out otherwise it will render at 0,0,0 inside the cube
+			camera.position.z = 15;	
+
+			//add lights and light helpers
+			var am_light = new THREE.AmbientLight( 0x404040 ); // soft white light
+			scene.add( am_light );
+			
+			var hem_light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+			var hem_helper = new THREE.HemisphereLightHelper( hem_light, 8 );
+			scene.add( hem_light );
+
+			//check to see if browser can use WebGL
+			if ( WEBGL.isWebGLAvailable() ) {
+			//render/animate loop is required to see anything. causes the renderer to redraw the scene every time the page is refreshed.
+
+				
+			//anything you want to move or change has to go through the animate loop
+				function animate() {
+					//advantages of using requestAnimationFrame: pauses when a user navigates to another browser or tab to conserve energy
+					requestAnimationFrame( animate );
+					//rotate every frame approximately 60 frame per second
+					mesh.skeleton.bones[1].scale.x += 0.01;
+					renderer.render( scene, camera );
+				}
+				animate();
+			}
+			//if WebGL is not available print an error message
+			else {
+
+				var warning = WEBGL.getWebGLErrorMessage();
+				document.getElementById( 'container' ).appendChild( warning );
+
+			}								
+		</script>
+	</body>
+</html>

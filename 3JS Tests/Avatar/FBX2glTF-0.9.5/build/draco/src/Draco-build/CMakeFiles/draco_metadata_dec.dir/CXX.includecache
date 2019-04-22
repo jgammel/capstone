@@ -1,0 +1,80 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/decoder_buffer.h
+stdint.h
+-
+cstring
+-
+memory
+-
+draco/core/macros.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/draco/core/macros.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/hash_utils.h
+stdint.h
+-
+functional
+-
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/macros.h
+assert.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/assert.h
+android/log.h
+-
+iostream
+-
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/symbol_coding_utils.h
+inttypes.h
+-
+type_traits
+-
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/varint_decoding.h
+type_traits
+-
+draco/core/decoder_buffer.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/draco/core/decoder_buffer.h
+draco/core/symbol_coding_utils.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/core/draco/core/symbol_coding_utils.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/geometry_metadata.h
+draco/metadata/metadata.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/draco/metadata/metadata.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/metadata.h
+cstring
+-
+memory
+-
+string
+-
+unordered_map
+-
+vector
+-
+draco/core/hash_utils.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/draco/core/hash_utils.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/metadata_decoder.cc
+draco/metadata/metadata_decoder.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/draco/metadata/metadata_decoder.h
+string
+-
+draco/core/varint_decoding.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/draco/core/varint_decoding.h
+
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/metadata_decoder.h
+draco/core/decoder_buffer.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/draco/core/decoder_buffer.h
+draco/metadata/geometry_metadata.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/draco/metadata/geometry_metadata.h
+draco/metadata/metadata.h
+/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/draco/src/Draco/src/draco/metadata/draco/metadata/metadata.h
+

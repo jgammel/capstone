@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/Fmt"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/Fmt.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/CMakeFiles/Fmt-complete.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/fmt/src/Fmt-stamp/Fmt-install.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/fmt/src/Fmt-stamp/Fmt-mkdir.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/fmt/src/Fmt-stamp/Fmt-download.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/fmt/src/Fmt-stamp/Fmt-update.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/fmt/src/Fmt-stamp/Fmt-patch.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/fmt/src/Fmt-stamp/Fmt-configure.rule"
+		},
+		{
+			"file" : "/Users/jgammel/Desktop/Harvard/Thesis/Working Files/3JS Tests/Avatar/FBX2glTF-0.9.5/build/fmt/src/Fmt-stamp/Fmt-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Fmt"
+		],
+		"name" : "Fmt"
+	}
+}
