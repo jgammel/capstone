@@ -707,25 +707,777 @@
     "samplers": [
         {}
     ],
+    "images": [
+        {
+            "name": "hair_cap.png",
+            "uri": "textures/hair_cap.png"
+        },
+        {
+            "name": "cap.jpg",
+            "uri": "textures/cap.jpg"
+        },
+        {
+            "name": "hair.png",
+            "uri": "textures/hair.png"
+        },
+        {
+            "name": "eye_2.jpg",
+            "uri": "textures/eye_2.jpg"
+        },
+        {
+            "name": "eye_2.jpg",
+            "uri": "textures/eye_2.jpg"
+        },
+        {
+            "name": "W_body_west_lingerie.jpg",
+            "uri": "textures/W_body_west_lingerie.jpg"
+        },
+        {
+            "name": "W_face_west.jpg",
+            "uri": "textures/W_face_west.jpg"
+        },
+        {
+            "name": "W_leg_hand_west.jpg",
+            "uri": "textures/W_leg_hand_west.jpg"
+        },
+        {
+            "name": "skin_beige_new_549394.jpg",
+            "uri": "textures/skin_beige_new_549394.jpg"
+        },
+        {
+            "name": "skin_beige_new_549394.jpg",
+            "uri": "textures/skin_beige_new_549394.jpg"
+        },
+        {
+            "name": "skin_nudes_549404.jpg",
+            "uri": "textures/skin_nudes_549404.jpg"
+        },
+        {
+            "name": "skin_nudes_549404.jpg",
+            "uri": "textures/skin_nudes_549404.jpg"
+        },
+        {
+            "name": "skin_beige_new_549394.jpg",
+            "uri": "textures/skin_beige_new_549394.jpg"
+        },
+        {
+            "name": "skin_beige_new_549394.jpg",
+            "uri": "textures/skin_beige_new_549394.jpg"
+        },
+        {
+            "name": "skin_nudes_549404.jpg",
+            "uri": "textures/skin_nudes_549404.jpg"
+        },
+        {
+            "name": "skin_nudes_549404.jpg",
+            "uri": "textures/skin_nudes_549404.jpg"
+        }
+    ],
+    "textures": [
+        {
+            "name": "female:Material3727F1",
+            "sampler": 0,
+            "source": 0
+        },
+        {
+            "name": "female:Material3733F1",
+            "sampler": 0,
+            "source": 1
+        },
+        {
+            "name": "female:Material3738F1",
+            "sampler": 0,
+            "source": 2
+        },
+        {
+            "name": "female:Material3749F1",
+            "sampler": 0,
+            "source": 3
+        },
+        {
+            "name": "female:Material3766F1",
+            "sampler": 0,
+            "source": 4
+        },
+        {
+            "name": "female:Material3867F1",
+            "sampler": 0,
+            "source": 5
+        },
+        {
+            "name": "female:Material3872F1",
+            "sampler": 0,
+            "source": 6
+        },
+        {
+            "name": "female:Material3877F1",
+            "sampler": 0,
+            "source": 7
+        },
+        {
+            "name": "female:Material3889F1",
+            "sampler": 0,
+            "source": 8
+        },
+        {
+            "name": "female:Material3896F1",
+            "sampler": 0,
+            "source": 9
+        },
+        {
+            "name": "female:Material3901F1",
+            "sampler": 0,
+            "source": 10
+        },
+        {
+            "name": "female:Material3911F1",
+            "sampler": 0,
+            "source": 11
+        },
+        {
+            "name": "female:Material3922F1",
+            "sampler": 0,
+            "source": 12
+        },
+        {
+            "name": "female:Material3927F1",
+            "sampler": 0,
+            "source": 13
+        },
+        {
+            "name": "female:Material3932F1",
+            "sampler": 0,
+            "source": 14
+        },
+        {
+            "name": "female:Material3941F1",
+            "sampler": 0,
+            "source": 15
+        }
+    ],
     "materials": [
         {
-            "name": "DefaultMaterial",
+            "name": "female:Material3707",
             "alphaMode": "OPAQUE",
             "extras": {
                 "fromFBX": {
-                    "shadingModel": "Lambert",
+                    "shadingModel": "Phong",
                     "isTruePBR": false
                 }
             },
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    0.0844736024737358,
+                    0.0617560036480427,
+                    0.0154663994908333,
                     1.0
                 ],
-                "metallicFactor": 0.200000002980232,
-                "roughnessFactor": 0.800000011920929
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3712",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.0844736024737358,
+                    0.0617560036480427,
+                    0.0154663994908333,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3717",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.0844736024737358,
+                    0.0617560036480427,
+                    0.0154663994908333,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3722",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.0844736024737358,
+                    0.0617560036480427,
+                    0.0154663994908333,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3727",
+            "alphaMode": "BLEND",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3733",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 1,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3738",
+            "alphaMode": "BLEND",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 2,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3749",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 3,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3754",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3763",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3766",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 4,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3867",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 5,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3872",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 6,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3877",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 7,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3885",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.320000022649765,
+                    0.320000022649765,
+                    0.320000022649765,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3889",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 8,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3896",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 9,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3901",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 10,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3907",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.64000004529953,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3909",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.500800013542175,
+                    0.325520008802414,
+                    0.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3911",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 11,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3919",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.320000022649765,
+                    0.320000022649765,
+                    0.320000022649765,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3922",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 12,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3927",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 13,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3932",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 14,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3937",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.64000004529953,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3939",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.500800013542175,
+                    0.325520008802414,
+                    0.0,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
+            }
+        },
+        {
+            "name": "female:Material3941",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Phong",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 15,
+                    "texCoord": 0
+                },
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.400000005960464,
+                "roughnessFactor": 0.247070893645287
             }
         }
     ],
@@ -734,7 +1486,7 @@
             "name": "unamed",
             "primitives": [
                 {
-                    "material": 0,
+                    "material": 11,
                     "mode": 4,
                     "attributes": {
                         "JOINTS_0": 52,
