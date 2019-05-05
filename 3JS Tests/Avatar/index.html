@@ -75,12 +75,14 @@
 					skeleton_helper.visible = true;
 					scene.add( skeleton_helper );
 
+					console.log( skeleton_helper );
+
 					//add a box helper to figure out how big the model is
+					//creates an object made up of line segments
+					//female_skel.gltf is 68.019in exported from CLO, y-axis height of box helper is 0.68417
 					var box_helper = new THREE.BoxHelper( model, 0xffff00 );
 					scene.add(box_helper);
 					
-					console.log(box_helper);
-
 					console.log("called when the resource is loaded");
 
 					//animate animates frames in a loop
@@ -136,8 +138,11 @@
 
 				//add the folders and inputs
 				var f_general = gui.addFolder('General'); //incl. height
-				var heightController = f_general.add(text, 'height').step(0.5).min(50).max(75);
+				var heightController = f_general.add(text, 'height').step(0.5).min(60).max(72);
 				var initialPosSpine = skeleton_helper.bones[1].position.y;
+				var initialPosSpine1 = skeleton_helper.bones[2].position.y;
+				var initialPosSpine2 = skeleton_helper.bones[3].position.y;
+
 
 				var f_shoulders = gui.addFolder('Shoulders'); //incl. across shoulder width
 				var shoulderController = f_shoulders.add(text, 'shoulderWidth').step(0.5).min(10).max(20);
@@ -147,6 +152,11 @@
 				var underbustController = f_bust.add(text, 'underbustCircumference').step(0.5).min(20).max(35);
 
 				var f_arms = gui.addFolder('Arms'); //incl. arm length, bicep circumference, elbow circumference, wrist circumference
+				var initialPosRArm = skeleton_helper.bones[17].position.y;
+				var initialPosRFArm = skeleton_helper.bones[18].position.y;
+				var initialPosLArm = skeleton_helper.bones[7].position.y;
+				var initialPosLFArm = skeleton_helper.bones[8].position.y;
+
 				var armController = f_arms.add(text, 'armLength').step(0.5).min(15).max(30);
 				var bicepController = f_arms.add(text, 'bicepCircumference').step(0.5).min(8).max(15);
 				var wristController = f_arms.add(text, 'wristCircumference').step(0.5).min(3).max(7);
@@ -156,8 +166,11 @@
 				var lowHipController = f_hips.add(text, 'lowHipCircumference').step(1).min(20).max(50);
 
 				var f_legs = gui.addFolder('Legs'); //include leg inseam height, thigh circumference, knee circumference, calf circumference, ankle circumference
-				var initialPosRLeg = skeleton_helper.bones[49].position.y;
-				var initialPosLLeg = skeleton_helper.bones[45].position.y;
+				var initialPosRLeg = skeleton_helper.bones[31].position.y;
+				var initialPosRLegUp = skeleton_helper.bones[30].position.y;
+				var initialPosLLeg = skeleton_helper.bones[27].position.y;
+				var initialPosLLegUp = skeleton_helper.bones[26].position.y;
+
 				var inseamController = f_legs.add(text, 'legInseamHeight').step(0.5).min(20).max(40);
 				var thighController = f_legs.add(text, 'thighCircumference').step(0.5).min(15).max(30);
 				var kneeController = f_legs.add(text, 'kneeCircumference').step(0.5).min(10).max(15);
@@ -167,18 +180,25 @@
 				//manipulate bones
 				//update Height
 				heightController.onChange(function(value) {
-					var change = (value - heightController.initialValue) / 100;
-					console.log(skeleton_helper.bones);
-					skeleton_helper.bones[1].position.y = initialPosSpine + (change * 0.5);
-					skeleton_helper.bones[49].position.y = initialPosRLeg + (change * 0.4);
-					skeleton_helper.bones[45].position.y = initialPosLLeg + (change * 0.4);
+					var change = (value - heightController.initialValue) / 100; //divide by 100 to translate inch units into abstract threejs units
+					skeleton_helper.bones[1].position.y = initialPosSpine + (change * 0.028);
+					skeleton_helper.bones[2].position.y = initialPosSpine1 + (change * 0.028);
+					skeleton_helper.bones[3].position.y = initialPosSpine2 + (change * 0.028);
+					//multiplier is calculated using CLO Avatar Editor, which is based on real world body scans. 
+					//For every 1/2 inch the avatar grows, the CF Neck to Waist measurement grows by 0.084 inches. The CF Neck to Waist measurement is made up of 3 spine bones in our skeleton 
+
+					skeleton_helper.bones[31].position.y = initialPosRLeg + (change * 0.14);
+					skeleton_helper.bones[27].position.y = initialPosLLeg + (change * 0.14);
+
+					skeleton_helper.bones[18].position.y = initialPosRFArm + (change * 0.0775);
+					skeleton_helper.bones[8].position.y = initialPosLFArm + (change * 0.0775);
 
 				});
 			}
 
 
 			var avatarEditor = function(){
-				this.height = 66;
+				this.height = 68.5;
 				this.shoulderWidth = 14.5;
 				this.bustHeight = 48;
 				this.underbustCircumference = 27;
