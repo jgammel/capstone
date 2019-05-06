@@ -156,6 +156,8 @@
 				var initialPosRFArm = skeleton_helper.bones[18].position.y;
 				var initialPosLArm = skeleton_helper.bones[7].position.y;
 				var initialPosLFArm = skeleton_helper.bones[8].position.y;
+				var initialPosRHand = skeleton_helper.bones[19].position.y;
+				var initialPosLHand = skeleton_helper.bones[9].position.y;
 
 				var armController = f_arms.add(text, 'armLength').step(0.5).min(15).max(30);
 				var bicepController = f_arms.add(text, 'bicepCircumference').step(0.5).min(8).max(15);
@@ -187,11 +189,18 @@
 					//multiplier is calculated using CLO Avatar Editor, which is based on real world body scans. 
 					//For every 1/2 inch the avatar grows, the CF Neck to Waist measurement grows by 0.084 inches. The CF Neck to Waist measurement is made up of 3 spine bones in our skeleton 
 
-					skeleton_helper.bones[31].position.y = initialPosRLeg + (change * 0.14);
-					skeleton_helper.bones[27].position.y = initialPosLLeg + (change * 0.14);
+					//Legs
+					skeleton_helper.bones[30].position.y = initialPosRLegUp - (change * 0.07);
+					skeleton_helper.bones[31].position.y = initialPosRLeg + (change * 0.07);
+					skeleton_helper.bones[27].position.y = initialPosLLeg + (change * 0.07);
+					skeleton_helper.bones[26].position.y = initialPosLLegUp - (change * 0.07);
 
-					skeleton_helper.bones[18].position.y = initialPosRFArm + (change * 0.0775);
-					skeleton_helper.bones[8].position.y = initialPosLFArm + (change * 0.0775);
+					//Arms
+					skeleton_helper.bones[18].position.y = initialPosRFArm + (change * 0.03875);
+					skeleton_helper.bones[8].position.y = initialPosLFArm + (change * 0.03875);
+					skeleton_helper.bones[19].position.y = initialPosRHand + (change * 0.03875);
+					skeleton_helper.bones[9].position.y = initialPosLHand + (change * 0.03875);
+
 
 				});
 			}
