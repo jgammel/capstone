@@ -138,34 +138,40 @@
 
 				//add the folders and inputs
 				var f_general = gui.addFolder('General'); //incl. height
-				var heightController = f_general.add(text, 'height').step(0.5).min(60).max(72);
+				var heightController = f_general.add(text, 'height').step(0.5).min(64).max(72);
 				var initialPosSpine = skeleton_helper.bones[1].position.y;
 				var initialPosSpine1 = skeleton_helper.bones[2].position.y;
 				var initialPosSpine2 = skeleton_helper.bones[3].position.y;
 
 
 				var f_shoulders = gui.addFolder('Shoulders'); //incl. across shoulder width
-				var shoulderController = f_shoulders.add(text, 'shoulderWidth').step(0.5).min(10).max(20);
+				var shoulderController = f_shoulders.add(text, 'shoulderWidth').step(0.5).min(13).max(17);
+				var initialPosLShoulder = skeleton_helper.bones[6].position.x;
+				var initialPosRShoulder = skeleton_helper.bones[16].position.x;
+
+				var initialPosLShoulderY = skeleton_helper.bones[6].position.y;
+				var initialPosRShoulderY = skeleton_helper.bones[16].position.y;
 
 				var f_bust = gui.addFolder('Bust'); //incl. bust height and under bust circumference
-				var bustController = f_bust.add(text, 'bustHeight').step(0.5).min(35).max(50);
-				var underbustController = f_bust.add(text, 'underbustCircumference').step(0.5).min(20).max(35);
+				var bustController = f_bust.add(text, 'bustCircumference').step(0.5).min(32).max(37);
+				var initialPosBust = skeleton_helper.bones[3].position.z;
 
 				var f_arms = gui.addFolder('Arms'); //incl. arm length, bicep circumference, elbow circumference, wrist circumference
 				var initialPosRArm = skeleton_helper.bones[17].position.y;
 				var initialPosRFArm = skeleton_helper.bones[18].position.y;
+
 				var initialPosLArm = skeleton_helper.bones[7].position.y;
 				var initialPosLFArm = skeleton_helper.bones[8].position.y;
+
 				var initialPosRHand = skeleton_helper.bones[19].position.y;
 				var initialPosLHand = skeleton_helper.bones[9].position.y;
 
-				var armController = f_arms.add(text, 'armLength').step(0.5).min(15).max(30);
-				var bicepController = f_arms.add(text, 'bicepCircumference').step(0.5).min(8).max(15);
-				var wristController = f_arms.add(text, 'wristCircumference').step(0.5).min(3).max(7);
+				var wristController = f_arms.add(text, 'wristCircumference').step(0.5).min(4).max(8);
+				var bicepController = f_arms.add(text, 'bicepCircumference').step(0.5).min(8).max(13);
+				
 
 				var f_hips = gui.addFolder('Hips'); //include high hip circumference and low hip circumference
-				var highHipController = f_hips.add(text, 'highHipCircumference').step(1).min(20).max(50);
-				var lowHipController = f_hips.add(text, 'lowHipCircumference').step(1).min(20).max(50);
+				var hipController = f_hips.add(text, 'hipCircumference').step(0.5).min(34).max(40);
 
 				var f_legs = gui.addFolder('Legs'); //include leg inseam height, thigh circumference, knee circumference, calf circumference, ankle circumference
 				var initialPosRLeg = skeleton_helper.bones[31].position.y;
@@ -203,19 +209,78 @@
 
 
 				});
+
+				//update Wrist
+				wristController.onChange(function(value) {
+					var change = (value / wristController.initialValue);
+					//forearm bones
+					skeleton_helper.bones[18].scale.z = change;
+					skeleton_helper.bones[8].scale.z = change;
+					skeleton_helper.bones[18].scale.x = change;
+					skeleton_helper.bones[8].scale.x = change;
+
+					//hand bones - don't morph
+					skeleton_helper.bones[19].scale.z = 1 / change;
+					skeleton_helper.bones[9].scale.z = 1 / change;
+					skeleton_helper.bones[19].scale.x = 1 / change;
+					skeleton_helper.bones[9].scale.x = 1 / change;
+				});
+
+				//update Biscep
+				bicepController.onChange(function(value) {
+					var change = (value / bicepController.initialValue);
+					//upper arm bones
+					skeleton_helper.bones[17].scale.z = change;
+					skeleton_helper.bones[7].scale.z = change;
+					skeleton_helper.bones[17].scale.x = change;
+					skeleton_helper.bones[7].scale.x = change;
+
+					//forearm bones - don't morph
+					skeleton_helper.bones[18].scale.z = 1 / change;
+					skeleton_helper.bones[8].scale.z = 1 / change;
+					skeleton_helper.bones[18].scale.x = 1 / change;
+					skeleton_helper.bones[8].scale.x = 1 / change;
+				});
+
+				//update Shoulder
+				shoulderController.onChange(function(value) {
+					var change = (value - shoulderController.initialValue) / 100; //divide by 100 to find how many units we need to move
+					var scale = (value / shoulderController.initialValue);
+					
+					skeleton_helper.bones[6].position.x = initialPosLShoulder + (change * 0.247);
+					skeleton_helper.bones[16].position.x = initialPosRShoulder - (change * 0.247);
+
+					//slightly adjust shoulder slope
+					skeleton_helper.bones[6].position.y = initialPosLShoulderY + (change * -0.001);
+					skeleton_helper.bones[16].position.y = initialPosRShoulderY + (change * -0.001);
+				});
+
+				bustController.onChange(function(value) {
+					var change = (value / bustController.initialValue);
+					skeleton_helper.bones[3].scale.z = change;
+					skeleton_helper.bones[2].scale.z = change;
+
+					//do not morph head or neck
+					skeleton_helper.bones[4].scale.z = 1 / change;
+					skeleton_helper.bones[5].scale.z = 1 / change;
+				});
+
+				hipController.onChange(function(value) {
+					var change = (value / hipController.initialValue);
+					skeleton_helper.bones[30].scale.z = change;
+					skeleton_helper.bones[26].scale.z = change;
+				});
 			}
 
 
 			var avatarEditor = function(){
 				this.height = 68.5;
-				this.shoulderWidth = 14.5;
-				this.bustHeight = 48;
-				this.underbustCircumference = 27;
+				this.shoulderWidth = 15;
+				this.bustCircumference = 32;
 				this.armLength = 22;
-				this.bicepCircumference = 10;
-				this.wristCircumference = 5.5;
-				this.highHipCircumference = 32.5;
-				this.lowHipCircumference = 36.5;
+				this.bicepCircumference = 10.5;
+				this.wristCircumference = 6;
+				this.hipCircumference = 36.5;
 				this.legInseamHeight = 31.5;
 				this.thighCircumference = 21.5;
 				this.kneeCircumference = 13;
