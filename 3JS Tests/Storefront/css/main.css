@@ -1,0 +1,71 @@
+
+/**
+ * Author: Joanna Gammel     
+ * Version: 0.0.1
+ * Naming Convention: BEM                            
+ */
+
+ /****IMPORTS***/
+
+
+/****GENERAL****/
+
+*{
+	font-family: 'Heebo', Helvetica, sans-serif;
+}
+
+a{
+	color: black;
+	text-decoration: underline;
+}
+
+a:hover{
+	text-decoration: none;
+	color: inherit;
+}
+
+/****LAYOUT****/
+
+#global{
+	border-bottom: 1px solid black;
+	background: black;
+	color: white;
+}
+
+#menu{
+	border-right: 1px solid black;
+}
+
+main{
+	
+}
+
+footer{
+	border-top: 1px solid black;
+	font-size: 0.75rem;
+	text-align: right;
+}
+
+/****BLOCKS****/
+
+.global__branding{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.global__menu{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/****ELEMENTS****/
+
+.shopping__item{
+	
+}
+
+/****MODIFIERS****/
+
+.preview__thumb--selected{
+	border: 1px solid black;
+}

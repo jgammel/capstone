@@ -166,12 +166,11 @@
 				var initialPosRHand = skeleton_helper.bones[19].position.y;
 				var initialPosLHand = skeleton_helper.bones[9].position.y;
 
-				var wristController = f_arms.add(text, 'wristCircumference').step(0.5).min(4).max(8);
-				var bicepController = f_arms.add(text, 'bicepCircumference').step(0.5).min(8).max(13);
+				var wristController = f_arms.add(text, 'wristCircumference').step(0.5).min(4).max(7);
 				
 
 				var f_hips = gui.addFolder('Hips'); //include high hip circumference and low hip circumference
-				var hipController = f_hips.add(text, 'hipCircumference').step(0.5).min(34).max(40);
+				var hipController = f_hips.add(text, 'hipCircumference').step(0.5).min(35).max(45);
 
 				var f_legs = gui.addFolder('Legs'); //include leg inseam height, thigh circumference, knee circumference, calf circumference, ankle circumference
 				var initialPosRLeg = skeleton_helper.bones[31].position.y;
@@ -226,22 +225,6 @@
 					skeleton_helper.bones[9].scale.x = 1 / change;
 				});
 
-				//update Biscep
-				bicepController.onChange(function(value) {
-					var change = (value / bicepController.initialValue);
-					//upper arm bones
-					skeleton_helper.bones[17].scale.z = change;
-					skeleton_helper.bones[7].scale.z = change;
-					skeleton_helper.bones[17].scale.x = change;
-					skeleton_helper.bones[7].scale.x = change;
-
-					//forearm bones - don't morph
-					skeleton_helper.bones[18].scale.z = 1 / change;
-					skeleton_helper.bones[8].scale.z = 1 / change;
-					skeleton_helper.bones[18].scale.x = 1 / change;
-					skeleton_helper.bones[8].scale.x = 1 / change;
-				});
-
 				//update Shoulder
 				shoulderController.onChange(function(value) {
 					var change = (value - shoulderController.initialValue) / 100; //divide by 100 to find how many units we need to move
@@ -269,18 +252,21 @@
 					var change = (value / hipController.initialValue);
 					skeleton_helper.bones[30].scale.z = change;
 					skeleton_helper.bones[26].scale.z = change;
+
+					skeleton_helper.bones[30].scale.x = change;
+					skeleton_helper.bones[26].scale.x = change;
+
 				});
 			}
 
 
 			var avatarEditor = function(){
-				this.height = 68.5;
+				this.height = 68;
 				this.shoulderWidth = 15;
-				this.bustCircumference = 32;
+				this.bustCircumference = 35.5;
 				this.armLength = 22;
-				this.bicepCircumference = 10.5;
 				this.wristCircumference = 6;
-				this.hipCircumference = 36.5;
+				this.hipCircumference = 39.5;
 				this.legInseamHeight = 31.5;
 				this.thighCircumference = 21.5;
 				this.kneeCircumference = 13;
