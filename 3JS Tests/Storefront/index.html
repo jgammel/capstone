@@ -15,49 +15,100 @@
 		<link href="https://fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+	
 	</head>
 	<body>
 		<section id="global">
-			<div class="global__branding">
-				<h1 class="global__h1">JöRD</h1>
-				<h2 class="global__h2">Bespoke designs</h2>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="global__branding col-sm-6 col-md-9 pt-4 pb-4">
+						<h1 class="global__h1">JøRD</h1>
+						<p>Atelier and Virtual Fitting Room</p>
+					</div>
+				</div>
 			</div>
-			<ul class="global__menu">
-				<li>Cart</li>
-				<li>Contact</li>
-			</ul>
 		</section>
 		<div class="container-fluid">
 			<div class="row">
-				<nav id="menu" class="col-md-4 col-lg-2">
+				<nav id="menu" class="col-md-4 col-lg-2 pt-4 pb-4">
 					<ul>
 						<li><a href="avatar.html">Edit Avatar</a></li>
 						<li>Winter '18</li>
 						<li>Spring '19</li>
+						<li>About This Project</li>
 					</ul>
 					</ul>
 				</nav>
-				<main class="col-md-8 col-lg-10">
+				<main class="col-md-8 col-lg-10 pt-4 pb-4">
 					<section id="banner">
 						<h2>Collection: Spring '19</h2>
 					</section>
 					<section id="filters">
-						Sort by...
+						<!--Filters here -->
 					</section>
 					<section id="shopping">
 						<div class="container-fluid">
 							<div class="row justify-content-around mt-4">
 								<div class="shopping__item col-sm-4">
 									<img class="img-fluid" src="images/assets/shopping items/1-SHOT_04_059-Front_904129bd-bd1e-46a3-bf32-9c1987c33609_500x.jpg">
+									<div class="row justify-content-around mt-2">
+										<div class="col-sm-8">
+											<p>Volant Silk Cashmere V Neck High Low</p>
+										</div>
+										<div class="col-sm-4">
+											<p>125$</p>
+										</div>
+									</div>
 								</div>
 								<div class="shopping__item col-sm-4">
 									<img class="img-fluid" src="images/assets/shopping items/SHOT_48_PEBBLE_WE82130_007_500x.jpg">
+									<div class="row justify-content-around mt-2">
+										<div class="col-sm-8">
+											<p>Oversized Ribbed Wool Cashmere Turtleneck</p>
+										</div>
+										<div class="col-sm-4">
+											<p>195$</p>
+										</div>
+									</div>
 								</div>
 								<div class="shopping__item col-sm-4">
 									<a href="WE91104.html">
 										<img class="img-fluid" src="images/Outfit A/thumb/WE91104-Long-Sleeve_Cropped-Rib-Top-Banana_-5_500x.jpg">
-										<p>Long Sleeve Ribbed Crop Top Banana</p>
 									</a>
+										<div class="row justify-content-around mt-2">
+											<div class="col-sm-8">
+												<a href="WE91104.html"><p>Long Sleeve Ribbed Crop Top</p></a>
+											</div>
+											<div class="col-sm-4">
+												<p>80$</p>
+											</div>
+										</div>
+										<div class="row justify-content-around">
+											<div class="shopping__item__swatch shopping__item__swatch--black">
+												<p>Black</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--pebble">
+												<p>Pebble</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--dark-ginger">
+												<p>Dark Ginger</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--powder-blue">
+												<p>Powder Blue</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--smoke">
+												<p>Smoke</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--selected shopping__item__swatch--banana">
+												<p>Banana</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--sienna">
+												<p>Sienna</p>
+											</div>
+										</div>
+										<div class="row pl-3 mt-3">
+											<p><img class="mr-2" src="images/assets/chiclet.jpg" width="50px"><em>Try it on!</em></p>
+										</div>
 								</div>
 							</div>
 							<div class="row justify-content-around mt-4">
@@ -69,6 +120,14 @@
 								</div>
 								<div class="shopping__item col-sm-4">
 									<img class="img-fluid" src="images/assets/shopping items/WE82127_OATMEAL_W_003_500x.jpg">
+									<div class="row justify-content-around mt-2">
+										<div class="col-sm-8">
+											<p>Unisex Cashmere Hoodie</p>
+										</div>
+										<div class="col-sm-4">
+											<p>175$</p>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="row justify-content-around mt-4 mb-4">
@@ -87,7 +146,7 @@
 				</main>
 		</div>
 	</div>
-		<footer>
+		<footer class="pt-4">
 			<p>Virtual Fitting Room app by Joanna Gammel for Capstone Design Studio Spring 2019</p>
 			<p>Photography &copy; Naadam Co</p>
 			<p>Avatar models &copy; CLO 3D</p>

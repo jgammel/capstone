@@ -15,25 +15,33 @@
 		<link href="https://fonts.googleapis.com/css?family=Heebo:300" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<!-- Load Avatar Rendering -->
+		<script type="text/javascript">
+			//create a string from the stored avatar settings values
+			var json = JSON.parse(localStorage.getItem("http://localhost:8888/Storefront/avatar.html.gui"));
+			var settings = json.remembered.Default[0];
+			var render_string = settings.height + "_" + settings.shoulderWidth + "_" + settings.bustCircumference + "_" + settings.wristCircumference + "_" + settings.hipCircumference;
+			render_string = render_string.split('.').join('');
+		</script>
 	</head>
 	<body>
 		<section id="global">
-			<div class="global__branding">
-				<h1 class="global__h1">JöRD</h1>
-				<h2 class="global__h2">Bespoke designs</h2>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="global__branding col-sm-6 col-md-9 pt-4 pb-4">
+						<h1 class="global__h1">Virtual Fitting Room</h1>
+					</div>
+				</div>
 			</div>
-			<ul class="global__menu">
-				<li>Cart</li>
-				<li>Contact</li>
-			</ul>
 		</section>
 		<div class="container-fluid">
 			<div class="row">
-				<nav id="menu" class="col-md-4 col-lg-2">
+				<nav id="menu" class="col-md-4 col-lg-2 pt-4 pb-4">
 					<ul>
 						<li><a href="avatar.html">Edit Avatar</a></li>
 						<li>Winter '18</li>
-						<li>Spring '19</li>
+						<li><a href="index.html">Spring '19</a></li>
 					</ul>
 					</ul>
 				</nav>
@@ -41,30 +49,59 @@
 					<section id="shopping">
 						<div class="container-fluid">
 							<div class="row mt-4">
-								<div id="preview" class="col-sm-8">
-									<div class="row mb-4">
-										<div class="col-sm-3">
-											<img class="img-fluid preview__thumb--selected" src="images/Outfit A/thumb/WE91104-Long-Sleeve_Cropped-Rib-Top-Banana_-5_500x.jpg">
-										</div>
-										<div class="col-sm-3">
-											<img class="img-fluid" src="images/Outfit A/thumb/WE91104-Long-Sleeve_Cropped-Rib-Top-Banana_-6_135x.jpg">
-										</div>
-										<div class="col-sm-3">
-											<img class="img-fluid" src="images/Outfit A/thumb/WE91104-Long-Sleeve_Cropped-Rib-Top-Banana_-7_135x.jpg">
-										</div>
-										<div class="col-sm-3">
-											<img class="img-fluid" src="images/assets/try-it-on.jpg">
+								<div id="preview">
+									<div class="col-sm-8">
+										<div class="row mb-4">
+											<div class="col-3">
+												<img class="img-fluid" src="images/Outfit A/thumb/WE91104-Long-Sleeve_Cropped-Rib-Top-Banana_-5_500x.jpg" onclick="imgSwitch()">
+											</div>
+											<div class="col-3">
+												<img class="img-fluid" src="images/Outfit A/thumb/WE91104-Long-Sleeve_Cropped-Rib-Top-Banana_-6_135x.jpg">
+											</div>
+											<div class="col-3">
+												<img class="img-fluid" src="images/Outfit A/thumb/WE91104-Long-Sleeve_Cropped-Rib-Top-Banana_-7_135x.jpg">
+											</div>
+											<div class="col-3">
+												<img class="img-fluid shopping__image--tryiton" src="images/assets/try-it-on.jpg" onclick="play()">
+											</div>
 										</div>
 									</div>
-									<img class="img-fluid" src="images/Outfit A/WE91104-Long-Sleeve_Cropped-Rib-Top-Banana_-5.jpg">
-								</div>
-								<div id="details" class="col-sm-4">
-									<h3>Long Sleeve Ribbed Crop Top Banana</h3>
-									<h4>80$</h4>
-									<p>Color: Banana</p>
-									<p>Size: small</p>
-									<button>Add to Cart</button>
-									<p>Description:</p>
+									<div class="row mb-4">
+										<section id="preview__image" class="col-sm-8">
+											<img class="img-fluid" src="images/Outfit A/WE91104-Long-Sleeve_Cropped-Rib-Top-Banana_-5.jpg">
+										</section>
+										<div id="details" class="col-sm-4">
+											<h3>Long Sleeve Ribbed Crop Top</h3>
+											<h4>80$</h4>
+											<p>Color: Banana</p>
+											<div class="row justify-content-around mt-2 mb-2">
+											<div class="shopping__item__swatch shopping__item__swatch--black">
+												<p>Black</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--pebble">
+												<p>Pebble</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--dark-ginger">
+												<p>Dark Ginger</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--powder-blue">
+												<p>Powder Blue</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--smoke">
+												<p>Smoke</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--selected shopping__item__swatch--banana">
+												<p>Banana</p>
+											</div>
+											<div class="shopping__item__swatch shopping__item__swatch--sienna">
+												<p>Sienna</p>
+											</div>
+										</div>
+											<p>Size: small</p>
+											<button class="shopping__button">Add to Cart</button>
+											<p>Description:</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -78,6 +115,28 @@
 			<p>Avatar models &copy; CLO 3D</p>
 			<p>Apparel pattern design by Natalia Burakowska</p>
 		</footer>
+
+		<!-- Page scripts -->
+		<script>
+		function play() {
+			var video = document.createElement('video');
+			video.src = 'animations/Outfit A/'+render_string+'.mov';
+			video.autoplay = false;
+			video.controls = true;
+			video.style.width = "100%";
+			el = document.getElementById("preview__image").children[0];
+			document.getElementById("preview__image").replaceChild(video, el);
+		}
+
+		function imgSwitch(){
+			var img = document.createElement('img');
+			img.src = 'images/Outfit A/WE91104-Long-Sleeve_Cropped-Rib-Top-Banana_-5.jpg';
+			img.className = 'img-fluid';
+			el = document.getElementById("preview__image").children[0];
+			document.getElementById("preview__image").replaceChild(img, el);
+		}
+
+		</script>
 
 		<!-- JavaScript -->
     	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -43,7 +43,7 @@ main{
 footer{
 	border-top: 1px solid black;
 	font-size: 0.75rem;
-	text-align: right;
+	text-align: center;
 }
 
 /****BLOCKS****/
@@ -60,12 +60,70 @@ footer{
 
 /****ELEMENTS****/
 
-.shopping__item{
-	
+#menu ul li{
+	font-size: 0.85rem;
+	list-style: none;
+	line-height: 1.75em;
+	text-transform: uppercase;
+}
+
+.global__menu li{
+	display: inline-block;
+}
+
+.shopping__item__swatch{
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+}
+
+.shopping__item__swatch p{
+	display: none;
+}
+
+.shopping__button{
+	width: 100%;
+	background: black;
+	color: white;
+	border-radius: 5px;
+	padding: 1em;
 }
 
 /****MODIFIERS****/
 
 .preview__thumb--selected{
 	border: 1px solid black;
+}
+
+.shopping__item__swatch--selected{
+	border: 1px solid black;
+	border-radius: 100%;
+}
+
+.shopping__item__swatch--banana{
+	background-color: yellow;
+}
+
+.shopping__item__swatch--black{
+	background-color: black;
+}
+
+.shopping__item__swatch--pebble{
+	background-color: lightgray;
+}
+
+.shopping__item__swatch--dark-ginger{
+	background-color: sienna;
+}
+
+.shopping__item__swatch--powder-blue{
+	background-color: lightblue;
+}
+
+.shopping__item__swatch--smoke{
+	background-color: gray;
+}
+
+.shopping__item__swatch--sienna{
+	background-color: orange;
 }

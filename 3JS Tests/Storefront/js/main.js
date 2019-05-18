@@ -10,3 +10,4 @@ $('#theModal').on('show.bs.modal', function (e) {
     modal.find('.modal-body').load(button.data("remote"));
 
 });
+
